@@ -1,0 +1,10 @@
+ <div class="edit"> 
+  <br><form action='/edit_post' method='post'>
+  <br>Title: <input type='text' name='post_title' value=<%= @post.title  %>>
+  <textarea name='body' rows='4' cols='50'>
+    <%= @post.text %>
+  </textarea>
+  <input type='hidden' value=<%= @post.id %> name='id'>
+  <input type='submit' name='post'></form>
+</edit>
+

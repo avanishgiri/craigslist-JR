@@ -1,0 +1,18 @@
+.container {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  border: 1px dotted black;
+}
+th {
+  text-align: left;
+}
+
+.toggle_post {
+  display: none;
+}
+
+li {
+  list-style:none;
+  padding-bottom: 8px;
+}

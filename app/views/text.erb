@@ -1,0 +1,9 @@
+<div class="container">
+<% if @post %>
+<h2><%= @post.title %></h2>
+<%= @post.text %>
+<% end %>
+</div>
+
+<a href='/'>Home</a>
+<a href=/edit/<%= @post.id %>>Edit</a>

@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>Welcome to Craiglist Jr!</h1>
+
+  <% if @categories %>
+      <% @categories.each do |category| %>
+         <li>
+          <a href=categories/<%=category.id%>>
+            <%=category.name%>
+          </a>
+          </li>
+         <% end %>
+  <% end %>
+  <br>
+  <br>
+  <input type='submit' value='New Post'>
+  <div class="toggle_post">
+  <br><form action='/create_post' method='post'>
+      <select name='id' id='categorylist'>
+      <% @categories.each do |category| %>
+      <option value=<%= category.id %>> <%= category.name %> </option>
+      <% end %>
+      </select>
+      <br>Title: <input type='text' name='post_title'>
+      <textarea name='body' rows='4' cols='50'></textarea>
+    <input type='submit' name='post'></form>
+  </div>
+</div>
+

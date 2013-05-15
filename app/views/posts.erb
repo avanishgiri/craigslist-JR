@@ -1,0 +1,13 @@
+<div class='container'>
+  <h1><%=@posts.last.category.name%></h1>
+  
+  <% if @posts %>
+    <% @posts.each do |post| %>
+      <li>
+        <a href=/posts/<%=post.id%>>
+          <%=post.title%>
+        </a>
+      </li>
+    <% end %>
+  <% end %>
+</div>
